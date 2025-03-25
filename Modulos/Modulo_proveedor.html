@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Proveedores</title>
+    <link rel="stylesheet" href="/Estilos/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script type="module" src="/JS/eventos.js"></script>
+</head>
+<body>
+
+    <main>
+        <div class="container-fluid mt-4">
+            <h2 class="text-center">Gestión de Proveedores</h2>
+
+            <!-- Contenedor para centrar buscador y botón -->
+            <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap my-3">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar proveedor" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+
+                <button class="btn btn-crear" data-bs-toggle="modal" data-bs-target="#modalRegistro">
+                    <i class="bi bi-plus-circle"></i> Registrar
+                </button>
+            </div>
+
+            <!-- Tabla de Proveedores -->
+            <div class="table-container">
+                <table class="table table-striped text-center">
+                    <thead>
+                        <tr>
+                            <th>NIT</th>
+                            <th>Nombre del Proveedor</th>
+                            <th>Representante de Ventas</th>
+                            <th>Teléfono</th>
+                            <th>Dirección</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-proveedor">
+                        <tr>
+                            <td>123456-1</td>
+                            <td>Tinta Mania</td>
+                            <td>José de Odo</td>
+                            <td>8888888</td>
+                            <td>Cr 77 # 77 B</td>
+                            <td>
+                                <button class="btn btn-editar"><i class="bi bi-pencil"></i> Editar</button>
+                                <button class="btn btn-eliminar"><i class="bi bi-trash"></i> Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- MODAL PARA REGISTRO DE PROVEEDOR -->
+    <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="modalRegistroLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRegistroLabel">Registrar Nuevo Proveedor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formProveedor">
+                        <div class="mb-3">
+                            <label for="nit" class="form-label">NIT:</label>
+                            <input type="text" class="form-control" id="nit" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="nombreProveedor" class="form-label">Nombre del Proveedor:</label>
+                            <input type="text" class="form-control" id="nombreProveedor" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="representante" class="form-label">Representante de Ventas:</label>
+                            <input type="text" class="form-control" id="representante" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Teléfono:</label>
+                            <input type="tel" class="form-control" id="telefono" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="direccion" class="form-label">Dirección:</label>
+                            <input type="text" class="form-control" id="direccion" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-success w-100">Guardar Proveedor</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js" defer></script>
+
+</body>
+</html>

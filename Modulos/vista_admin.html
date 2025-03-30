@@ -11,27 +11,27 @@
 <body>
 
     <!-- Barra de Navegación Superior -->
-    <nav class="navbar navbar-top bg-dark text-white p-3">
-        <div class="container-fluid d-flex justify-content-between align-items-center">
+    <nav class="navbar navbar-top bg-dark text-white px-3">
+        <div class="container-fluid justify-content-start">
             <!-- Botón para colapsar/expandir el menú lateral -->
-            <button class="btn btn-light" type="button" id="sidebarToggle">
+            <button class="btn btn-light me-3" type="button" id="sidebarToggle">
                 <i class="bi bi-list"></i>
             </button>
 
             <!-- Logo o título alineado correctamente -->
             <span class="fs-4 d-flex align-items-center">
-                <i class="bi bi-graph-up me-2"></i> Diventrantracker
+                <img class="mx-2" src="../img/LogoBlanco.png" width="40px" alt="Logo Diventracker"> Diventrantracker
             </span>
 
             <!-- Menú desplegable del usuario -->
-            <div class="dropdown">
+            <div class="dropdown ms-auto">
                 <button class="btn btn-light dropdown-toggle d-flex align-items-center px-3 py-2 rounded-pill shadow-sm" type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-person-circle me-2"></i> Admin
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="userMenu">
                     <li><a class="dropdown-item d-flex align-items-center py-2" href="#"><i class="bi bi-pencil-square me-2"></i> Editar Perfil</a></li>
-                      <li><a class="dropdown-item d-flex align-items-center py-2" href="/Modulos/vista_empleado.html"><i class="bi bi-pencil-square me-2"></i> Vista empleado </a></li>
-                    <li><a class="dropdown-item d-flex align-items-center py-2" href="/index.html"><i class="bi bi-box-arrow-right me-2"></i> Cerrar Sesión</a></li>
+                      <li><a class="dropdown-item d-flex align-items-center py-2" href="vista_empleado.html"><i class="bi bi-pencil-square me-2"></i> Vista empleado </a></li>
+                    <li><a class="dropdown-item d-flex align-items-center py-2" href="../index.html"><i class="bi bi-box-arrow-right me-2"></i> Cerrar Sesión</a></li>
                 </ul>
             </div>
         </div>
@@ -42,15 +42,15 @@
         <!-- Menú lateral -->
         <nav id="sidebar">                
             <ul class="nav flex-column">
-                <li class="nav-item"><a class="nav-link" href="/Modulos/Modulo_historial_alertas.html" target="modulos"><i class="bi bi-clock-history"></i> Historial y alertas</a></li>
-                <li class="nav-item"><a class="nav-link" href="/Modulos/Modulo_inventario.html" target="modulos"><i class="bi bi-box-seam"></i> Inventario</a></li>
-                <li class="nav-item"><a class="nav-link" href="/Modulos/Modulo_clientes.html" target="modulos"><i class="bi bi-people"></i> Gestión cliente</a></li>
-                <li class="nav-item"><a class="nav-link" href="/Modulos/Modulo_garantias.html" target="modulos"><i class="bi bi-tools"></i> Garantías</a></li>
-                <li class="nav-item"><a class="nav-link" href="/Modulos/Modulo_proveedor.html" target="modulos"><i class="bi bi-truck"></i> Gestión proveedores</a></li>
-                <li class="nav-item"><a class="nav-link" href="/Modulos/Modulo_Servicio.html" target="modulos"><i class="bi bi-gear"></i> Servicio Técnico</a></li>
-                <li class="nav-item"><a class="nav-link" href="/Modulos/Modulo_informes.html" target="modulos"><i class="bi bi-bar-chart"></i> Informes</a></li>
-                <li class="nav-item"><a class="nav-link" href="/Modulos/Modulo_Registro.html" target="modulos"><i class="bi bi-pencil-square"></i> Registro</a></li>
-                <li class="nav-item"><a class="nav-link" href="../Modulos/Modulo_ventas.html" target="modulos"><i class="bi bi-currency-dollar"></i> Ventas</a></li>
+                <li class="nav-item"><a class="nav-link" href="Modulo_historial_alertas.html" target="modulos"><i class="bi bi-clock-history"></i> Historial y alertas</a></li>
+                <li class="nav-item"><a class="nav-link" href="Modulo_inventario.html" target="modulos"><i class="bi bi-box-seam"></i> Inventario</a></li>
+                <li class="nav-item"><a class="nav-link" href="Modulo_clientes.html" target="modulos"><i class="bi bi-people"></i> Gestión cliente</a></li>
+                <li class="nav-item"><a class="nav-link" href="Modulo_garantias.html" target="modulos"><i class="bi bi-tools"></i> Garantías</a></li>
+                <li class="nav-item"><a class="nav-link" href="Modulo_proveedor.html" target="modulos"><i class="bi bi-truck"></i> Gestión proveedores</a></li>
+                <li class="nav-item"><a class="nav-link" href="Modulo_Servicio.html" target="modulos"><i class="bi bi-gear"></i> Servicio Técnico</a></li>
+                <li class="nav-item"><a class="nav-link" href="Modulo_informes.html" target="modulos"><i class="bi bi-bar-chart"></i> Informes</a></li>
+                <li class="nav-item"><a class="nav-link" href="Modulo_Registro.html" target="modulos"><i class="bi bi-pencil-square"></i> Registro</a></li>
+                <li class="nav-item"><a class="nav-link" href="Modulo_ventas.html" target="modulos"><i class="bi bi-currency-dollar"></i> Ventas</a></li>
             </ul>                
         </nav>
         

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Proveedores</title>
-    <link rel="stylesheet" href="../Estilos/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../Estilos/styles.css">
     <script type="module" src="/JS/eventos.js"></script>
 </head>
 <body>
@@ -16,44 +16,50 @@
             <h2 class="text-center">Gestión de Proveedores</h2>
 
             <!-- Contenedor para centrar buscador y botón -->
-            <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap my-3">
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Buscar proveedor" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+            <div class="d-flex justify-content-center align-items-center gap-2 my-3">
+                <form class="d-flex align-items-center gap-2">
+                    <input class="form-control" type="search" placeholder="Buscar proveedor" aria-label="Search">
+                    <button class="btn btn-outline-enviar" type="submit">Buscar</button>
                 </form>
 
-                <button class="btn btn-crear" data-bs-toggle="modal" data-bs-target="#modalRegistro">
+                <button class="btn" data-bs-toggle="modal" data-bs-target="#modalRegistro">
                     <i class="bi bi-plus-circle"></i> Registrar
                 </button>
             </div>
 
             <!-- Tabla de Proveedores -->
-            <div class="table-container">
-                <table class="table table-striped text-center">
-                    <thead>
-                        <tr>
-                            <th>NIT</th>
-                            <th>Nombre del Proveedor</th>
-                            <th>Representante de Ventas</th>
-                            <th>Teléfono</th>
-                            <th>Dirección</th>
-                            <th>Acción</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tabla-proveedor">
-                        <tr>
-                            <td>123456-1</td>
-                            <td>Tinta Mania</td>
-                            <td>José de Torres</td>
-                            <td>8888888</td>
-                            <td>Cr 77 # 77 B</td>
-                            <td>
-                                <button class="btn btn-editar"><i class="bi bi-pencil"></i> Editar</button>
-                                <button class="btn btn-eliminar"><i class="bi bi-trash"></i> Eliminar</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="d-flex justify-content-center">
+                <div class="table-responsive p-4">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>NIT</th>
+                                <th>Nombre del Proveedor</th>
+                                <th>Representante de Ventas</th>
+                                <th>Teléfono</th>
+                                <th>Dirección</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-proveedor">
+                            <tr>
+                                <td>123456-1</td>
+                                <td>Tinta Mania</td>
+                                <td>José de Torres</td>
+                                <td>8888888</td>
+                                <td>Cr 77 # 77 B</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-secondary me-1" data-bs-toggle="modal" data-bs-target="#modalEditar">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </main>

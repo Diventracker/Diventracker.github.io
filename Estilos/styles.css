@@ -9,27 +9,27 @@
 /* Fuentes personalizadas */
 @font-face {
     font-family: "Titulo";
-    src: url(/Fuentes/Montserrat/Montserrat-Italic-VariableFont_wght.ttf) format("truetype");
+    src: url(../Fuentes/Montserrat/Montserrat-Italic-VariableFont_wght.ttf) format("truetype");
 }
 @font-face {
     font-family: "TituloR";
-    src: url(/Fuentes/Montserrat/Montserrat-VariableFont_wght.ttf) format("truetype");
+    src: url(../Fuentes/Montserrat/Montserrat-VariableFont_wght.ttf) format("truetype");
 }
 @font-face {
     font-family: "sub_titulo";
-    src: url(/Fuentes/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf) format("truetype");
+    src: url(../Fuentes/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf) format("truetype");
 }
 @font-face {
     font-family: "sub_titulo2";
-    src: url(/Fuentes/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf) format("truetype");
+    src: url(../Fuentes/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf) format("truetype");
 }
 @font-face {
     font-family: "contenido";
-    src: url(/Fuentes/Roboto/Roboto-Italic-VariableFont_wdth\,wght.ttf) format("truetype");
+    src: url(../Fuentes/Roboto/Roboto-Italic-VariableFont_wdth\,wght.ttf) format("truetype");
 }
 @font-face {
     font-family: "contenido2";
-    src: url(/Fuentes/Roboto/Roboto-VariableFont_wdth\,wght.ttf) format("truetype");
+    src: url(../Fuentes/Roboto/Roboto-VariableFont_wdth\,wght.ttf) format("truetype");
 }
 
 /* Estilos generales */
@@ -45,110 +45,26 @@ a {
     font-family: "sub_titulo";
 }
 
-
-
-.nav-link {
-    display: flex; /* Asegura que el ícono y el texto estén en línea */
-    align-items: center; /* Alinea verticalmente los elementos */
-    gap: 10px; /* Añade espacio entre el ícono y el texto */
+/*Cambiar el estilo al input cuando se le da click*/
+.form-control:focus {
+    border-color: var(--color2);
+    box-shadow: 0 0 0 0.25rem rgba(94, 145, 136, 0.25);
 }
 
-.Titulo {
-    text-align: center;
-}
-
-/* Menú lateral */
-.sidebar {
-    width: 250px;
-    background-color: var(--color2); /* Verde oscuro */
-    color: white;
-    position: fixed;
-    height: 100vh;
-    transition: width 0.3s ease-in-out;
-}
-
-/* Estilo de enlaces del menú */
-.sidebar a {
-    color: white;
-    text-decoration: none;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-}
-
-.sidebar a i {
-    margin-right: 12px;
-    font-size: 20px;
-}
-
-.sidebar a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
-}
-
-/* Navbar */
-.navbar {
-    background-color: var(--color4); /* Verde claro */
-    color: white;
-    padding: 15px;
-    font-size: 15px;
-}
-
+/*Estilos Tablas*/
 .table {
-    width: 90%;
-    max-width: 1400px;
-    border-collapse: collapse;
-    background-color: #ffffff !important; /* Blanco puro para mayor contraste */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
-    margin: auto;
-    border: 4px solid var(--color3) !important; /* Bordes más marcados */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */    
+    border: 4px solid var(--color3); /* Bordes más marcados */
 }
 
 /* Estilos para celdas */
 .table th, .table td {
-    border: 2px solid var(--color3) !important; /* Bordes más visibles */
-    padding: 14px;
+    border: 2px solid var(--color3); /* Bordes más visibles */    
     text-align: center;
     font-size: 18px;
 }
 
-/* Encabezados más visibles */
-.table thead {
-    background-color: var(--color2) !important;
-    color: var(--color5) !important;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* Alternar colores en filas para mayor contraste */
-.table-striped tbody tr:nth-child(odd) {
-    background-color: var(--color3) !important;
-    color: var(--color5) !important;
-}
-
-.table-striped tbody tr:nth-child(even) {
-    background-color: var(--color4) !important;
-    color: var(--color5) !important;
-}
-
-
 /* Botones */
-.btn {
-    font-size: 16px;
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    width: auto;
-}
-
-.btn i {
-    margin-right: 8px;
-    font-size: 18px;
-}
 
 .btn-crear {
     background-color: #007BFF; /* Azul */
@@ -165,70 +81,33 @@ a {
     color: white;
 }
 
-/* Grupo de botones */
-.button-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-}
-
-/* Menú lateral colapsable */
-#sidebar {
-    width: 250px;
-    background-color: var(--color2); /* Color del menú lateral */
+.btn.btn-enviar{
+    background-color: var(--color2); /* Verde Claro */
     color: white;
-    position: fixed;
-    height: 100vh;
-    transition: all 0.3s ease-in-out;
-    padding-top: 10px;
 }
 
-#sidebar a {
+
+.btn.btn-enviar:hover{
+    background-color: var(--color3); /* Verde Oscuro */
     color: white;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    text-decoration: none;
 }
 
-#sidebar a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+.btn-outline-enviar {
+    border-color: var(--color3);  /* Color del borde */
+    color: var(--color3); /* Color del texto */
 }
 
-/* Contenido principal */
-
-
-/* Cuando el menú está colapsado */
-#sidebar.collapsed {
-    margin-left: -250px;
+.btn.btn-outline-enviar:hover{
+    background-color: var(--color2); /* Color de fondo */
+    color: white; /* Color del texto */
 }
 
-#sidebar.collapsed + main {
-    margin-left: 0;
-}
-
-/* Botón de colapso */
-#sidebarToggle {
-    background-color: var(--color2);
-    border: none;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-#sidebarToggle:hover {
-    background-color: var(--color3); /* Color más oscuro al pasar el mouse */
-}
-
+/*Modales*/
 .modal-header{
     background-color: var(--color2);
-
 }
 
-.alto-row{
-    height: 90vh;
+.modal-title{
+    color: white;
 }
+

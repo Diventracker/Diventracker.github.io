@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Servicios</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../Estilos/styles.css" />
+  <script type="module" src="/JS/eventos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <main class="container py-5">
+    <h1 class="text-center mb-5"> Dashboard</h1>
+
+    <!-- Gráficos -->
+    <div class="row mb-5">
+      <div class="col-md-6">
+        <h5 class="text-center">Ventas de Lunes a Viernes</h5>
+        <canvas id="graficoVentas"></canvas>
+      </div>
+      <div class="col-md-6">
+        <h5 class="text-center">Servicios Realizados</h5>
+        <canvas id="graficoServicios"></canvas>
+      </div>
+    </div>
+
+    <!-- Tarjetas de productos próximos a agotarse -->
+    <h5 class="mb-4">Productos próximos a agotarse</h5>
+    <div class="row" id="productosAlertas">
+  
+    </div>
+
+    
+<H2> Ultimos Servicios </H2>
+
+
+<H2> Ultimas Ventas</H2>
+
+<H2> Informes </H2>
+
+
+
+  <!-- Script para las gráficas y tarjetas -->
+  <script>
+    // Datos ficticios
+    const dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
+    const ventas = [120, 90, 150, 80, 100];
+    const servicios = [5, 8, 6, 9, 7];
+
+    // Gráfico de Ventas
+    new Chart(document.getElementById("graficoVentas"), {
+      type: "bar",
+      data: {
+        labels: dias,
+        datasets: [{
+          label: "Ventas ($)",
+          data: ventas,
+          backgroundColor: "rgba(54, 162, 235, 0.6)"
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        }
+      }
+    });
+
+    // Gráfico de Servicios (ahora de barras también)
+    new Chart(document.getElementById("graficoServicios"), {
+      type: "bar",
+      data: {
+        labels: dias,
+        datasets: [{
+          label: "Servicios realizados",
+          data: servicios,
+          backgroundColor: "rgba(255, 99, 132, 0.6)"
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        }
+      }
+    });
+
+    // Productos a punto de agotarse (ejemplo estático)
+    const productos = [
+      { nombre: "Tinta Epson", cantidad: 3 },
+      { nombre: "Resmas de papel", cantidad: 5 },
+      { nombre: "Cartuchos HP", cantidad: 2 }
+    ];
+
+    const contenedor = document.getElementById("productosAlertas");
+
+    productos.forEach(p => {
+      const tarjeta = document.createElement("div");
+      tarjeta.className = "col-md-4 mb-3";
+      tarjeta.innerHTML = `
+        <div class="card border-danger h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">${p.nombre}</h5>
+            <p class="card-text text-danger"><strong>${p.cantidad} unidades restantes</strong></p>
+            <i class="bi bi-exclamation-triangle-fill text-danger fs-3"></i>
+          </div>
+        </div>
+      `;
+      contenedor.appendChild(tarjeta);
+    });
+  </script>
+
+</main>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

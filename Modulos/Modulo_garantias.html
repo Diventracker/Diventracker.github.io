@@ -67,6 +67,56 @@
             </div>
 
         </div>
+
+ <!-- Modal Editar -->
+    <div class="modal fade" id="modalEditar" aria-labelledby="modalEditarLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditarLabel">Actualizar garantia </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Pasar el id del cliente mediante el link del form -->
+                    <form id="formCliente" action="" method="post">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Equipo:</label>
+                            <input type="text" class="form-control" value="" name="nombre_cliente" required
+                                pattern="[A-Za-z\s]+" maxlength="50">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cedula" class="form-label">Fecha de Inicio:</label>
+                            <input type="text" class="form-control" value="" name="cedula" required pattern="\d+"
+                                maxlength="10">
+                        </div>
+                        <div class="mb-3">
+                            <label for="direccion" class="form-label">Descripción:</label>
+                            <input type="text" class="form-control" name="direccion_cliente" value="" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-enviar w-100">Actualizar Cliente</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
     </main>
 
     <!-- Scripts -->

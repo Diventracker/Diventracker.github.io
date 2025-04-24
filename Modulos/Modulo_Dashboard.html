@@ -36,10 +36,81 @@
     
 <H2> Ultimos Servicios </H2>
 
+<div class="d-flex justify-content-center">
+  <div class="table-responsive p-4">
+      <table class="table table-striped table-hover">
+          <thead>
+              <tr>
+                  <th>ID servicio</th>
+                  <th>Tipo de equipo</th>
+                  <th>Marca</th>
+                  <th>Modelo</th>
+                  <th>Descripción</th>
+                  <th>Fecha recepción</th>
+                  <th>Fecha entrega</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+              </tr>
+          </thead>
+          <tbody id="tabla-servicios">
+              <tr>
+                  <td>1</td>
+                  <td>MESA</td>
+                  <td>HP</td>
+                  <td>PC Master Pro RGB</td>
+                  <td>No da imagen al monitor</td>
+                  <td>Hoy</td>
+                  <td>En unos días</td>
+                  <td>Pendiente</td>
+                  <td>
+                      <button class="btn btn-sm btn-outline-secondary me-1" data-bs-toggle="modal" data-bs-target="#modalEditar">
+                          <i class="bi bi-pencil"></i>
+                      </button>
+                      <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar">
+                          <i class="bi bi-trash"></i>
+                      </button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
+</div>
+
 
 <H2> Ultimas Ventas</H2>
 
-<H2> Informes </H2>
+<div class="d-flex justify-content-center">
+  <div class="table-responsive p-4 w-100">
+      <table class="table table-striped table-hover">
+          <thead>
+              <tr>
+                  <th>ID Venta</th>
+                  <th>Fecha</th>
+                  <th>Cliente</th>
+                  <th>Total</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>1</td>
+                  <td>2024-03-24</td>
+                  <td>Juan Pérez</td>
+                  <td>$500</td>
+                  <td>Pagado</td>
+                  <td>
+                      <button class="btn" data-bs-toggle="modal" data-bs-target="#modaldetalle">
+                          <i class="bi bi-plus-circle"></i> Detalles
+                      </button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
+</div>
 
 
 

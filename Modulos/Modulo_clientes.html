@@ -120,14 +120,15 @@
                     <h5 class="modal-title" id="modalEliminarLabel">Eliminar Cliente</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="modal-body">
-                    <!-- Pasar el id del cliente mediante el link del form -->
-                    <form id="formCliente" action="" method="post">
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Seguro que quiere eliminar a: </label>
-                        </div>
-                        <button type="submit" class="btn btn-enviar w-100">Confirmar</button>
-                    </form>
+                <div class="modal-body text-center">
+                    <p >¿Seguro que desea eliminar este cliente?</p>
+                    <input type="hidden" id="clienteIdToDelete"/>
+                    <!-- Span que muestra el nombre del cliente -->
+                    <span id="nombreCliente" class="fw-bold d-block fs-4">Deivit Agudelo</span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Eliminar</button>
                 </div>
             </div>
         </div>
